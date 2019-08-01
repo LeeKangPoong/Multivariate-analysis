@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multivariate Analysis in Metabolomics</title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <h1><a href="index.html"
+    title="Multivariate Analysis in Metabolomics">
+    Multivariate Analysis in Metabolomics</a></h1>
+
+  <ol>
+    <li><a href="1.html">PCA</a></li>
+    <li><a href="2.html">PLS</a></li>
+    <li><a href="3.html">OPLS</a></li>
+  </ol>
+
+  <h3>PCA(Principal Components Analysis) (주성분분석)</h3>: dimensionality(variables) reduction, feature extraction
+  <p>
+  <img src="PCA.JPG">
+  <br>
+  ① Input data의 공분산 행렬 계산			 변수들 간의 상관관계 (= 상관계수)
+  <br>
+  ② 공분산 행렬의 고유 값과 고유벡터 계산		 상관관계의 특성을 나타내는 최소 단위
+  						 상관관계 정도의 크기 계산
+  <br>
+  ③ 고유 값의 크기 순서대로 고유벡터를 나열		 큰 상관관계를 나타내는 변수 특성 나열
+  <br>
+  ④ 정렬된 고유벡터 가운데 일부 선택			 고유벡터 확인하고 고유 값의 크기에 따라 행 단위로 선택 (P-value)
+  							   (-1 <= p-value <= 1)
+  <br>
+  ⑤ 해당 고유 벡터와 Input data 내적			 Input data를 고유 벡터에 정사영 (주성분 추출)
+  						 행의 개수가 감소했으므로 variables의 수 감소
+  									      (차원 축소)
+  </p>  
+</body>
+</html>
